@@ -1,0 +1,39 @@
+<% if (title =='Contacting me'){ %>
+<div style="float: left; position: fixed;" >
+    <h4> My contact info</h4>
+    <p> Email: alleychaggar@gmail.com</p>
+    <p> Phone Number: 416-700-2894</p>
+</div>
+    
+    <div style="text-align:center">
+        <h1>Welcome to the contact me page</h1>
+        
+<!--Form for contacting me -->
+    <form>
+        <div class="mb-3"> 
+        <label for="fname" class="form-label">First Name</label>
+        <input style="display: initial; width: 10%" type="text" class="form-control" id="fname" name="fname"></div>
+        <div class="mb-3"> 
+        <label for="lname" class="form-label">Last Name</label>
+        <input style="display: initial; width: 10%" type="text" class="form-control" id="lname" name="lname"></div>
+        <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input style="display: initial; width: 10%" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">I'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+        <label for="cnumber" class="form-label">Contact number</label>
+        <input style="display: initial; width: 10%" type="tel" class="form-control" id="cnumber">
+        <div id="cnumberhelp" class="form-text"> I'll never share your contact number with anyone else.</div>
+        <div class="mb-3"> 
+        <label for="textbox" class="form-label">Put your message</label>
+        <input style="display: initial; width: 30%" type="text" class="form-text" id="textbox" name="textbox"></div>
+
+        <a href="/home">
+        <button type="button" class="bg-dark" value="homepage" style="color: White;">Submit</button>
+        </a>
+        
+    </form>
+    </div>
+  <%} %> 
+

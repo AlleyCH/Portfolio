@@ -1,10 +1,15 @@
 #!/usr/bin/env node
 
+/*File name: Assignment1
+Student’s Name: Alley Chaggar
+StudentID: 301194572 
+Date: 2022-09-29*/
+
 /**
  * Module dependencies.
  */
 
-var app = require('./app');
+var app = require('./config/app');
 var debug = require('debug')('assignment1:server');
 var http = require('http');
 
