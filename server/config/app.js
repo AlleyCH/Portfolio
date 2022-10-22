@@ -21,7 +21,6 @@ let flash = require('connect-flash');
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 let userCollectionRouter = require('../routes/user_collection');  
-let booksRouter = require('../routes/book');
 
 let app = express(); // signs express module to app
 
@@ -111,7 +110,8 @@ mongoDB.once('open', ()=>{
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/user-list', userCollectionRouter);
-app.use('/book-list', booksRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

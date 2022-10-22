@@ -18,9 +18,9 @@
                 <tr class="d-flex">
                     <th class="text-center col-2">Name</th>
                     <th class="text-center col-2">Number</th>
-                    <th class="text-center col-1">Email</th>
-                    <th class="col-6">Edit</th>
-                    <th class="text-center col-1">Delete</th>
+                    <th class="text-center col-3">Email</th>
+                    <th class="col-2">Edit</th>
+                    <th class="text-center col-3">Delete</th>
                 </tr>
 
                 <!-- Repeatable Template Row -->
@@ -29,13 +29,13 @@
                     <tr class="d-flex">
                         <td class="text-center col-2"><%= user_collection[count].contactname %></td>
                         <td class="text-center col-2"><%= user_collection[count].contactnumber %></td>
-                        <td class="text-center col-1"><%= user_collection[count].emailaddress %></td>        
-                        <td class="text-center col-1">
-                            <td class="text-center col-3">
+                        <td class="text-center col-3"><%= user_collection[count].emailaddress %></td>        
+                        <td class="text-center col-0">
+                            <td class="text-center col-0">
                                 <a href="/user-list/edit/<%= user_collection[count]._id %>" class="btn btn-primary btn-sm">
                                 <i class="fas fa-pencil-alt"></i> Edit</a>
                             </td>
-                            <td class="text-center col-3">
+                            <td class="text-center col-4">
                                 <a href="/user-list/delete/<%= user_collection[count]._id %>" class="btn btn-danger btn-sm">
                                 <i class="fas fa-trash-alt"></i> Delete</a>
                             </td>
