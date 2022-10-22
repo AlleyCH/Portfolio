@@ -28,8 +28,22 @@
           </li>
 
           <li class="nav-item">
+            <a class="nav-link <%= (title == 'user-list' ? ' active' : '') %>" aria-current="page" href="/user-list"><i class="fa-solid fa-address-book"></i> Business Contacts List</a>
+        </li>
+
+          <li class="nav-item">
               <a class="nav-link <%= (title == 'Contacting me' ? ' active' : '') %>" aria-current="page" href="/contactMe"><i class="fa-solid fa-address-book"></i> Contact Me</a>
-          </li>                 
+          </li>  
+          
+          <% if(typeof displayName == 'string' && displayName) { %>
+            <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+            <li class="nav-item"><a href="/logout" class="nav-link">
+              <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+          <% } else { %>
+            <li class="nav-item"><a href="/login" class="nav-link">
+              <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+          <% } %>
+          
         </div>
       </div>
     </nav>

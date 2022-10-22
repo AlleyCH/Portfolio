@@ -9,7 +9,7 @@ Date: 2022-09-29*/
  * Module dependencies.
  */
 
-var app = require('./config/app');
+var app = require('./server/config/app');
 var debug = require('debug')('assignment1:server');
 var http = require('http');
 
@@ -93,3 +93,4 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+

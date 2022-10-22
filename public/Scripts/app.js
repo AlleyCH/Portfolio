@@ -3,13 +3,27 @@ Student’s Name: Alley Chaggar
 StudentID: 301194572 
 Date: 2022-09-29*/
 
-// IIFE -- Imediatly Invoked function expression 
-
+// IIFE -- Immediately Invoked Function Expression
 (function(){
 
-    function start(){
-        console.log('App started.....');
+    function Start()
+    {
+        console.log("App Started...");
 
-        window.addEventListener("load", Start);
+        let deleteButtons = document.querySelectorAll('.btn-danger'); 
+        
+        for(button of deleteButtons)
+        {			
+            button.addEventListener('click', (event)=>{
+                if(!confirm("Are you sure?")) // confirms if user is sure when deleting a buisness contact 
+                {
+                    event.preventDefault();
+                    window.location.assign('/user-list');
+                }
+            });
+        }
     }
-})
+
+    window.addEventListener("load", Start);
+
+})();
